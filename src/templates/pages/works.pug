@@ -1,0 +1,66 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,700i&subset=cyrillic', rel='stylesheet')
+    link(rel='stylesheet', href='styles/normalize.css')
+    link(rel='stylesheet', href='styles/main.min.css')
+    title Портфолио
+  body
+    .wrapper
+      .works
+        section.section.main__section.main__section--works
+          ul.social__list
+            li.social__item
+              a.social__link(href='') vk
+            li.social__item
+              a.social__link(href='vk') git-hub
+            li.social__item
+              a.social__link(href='vk') in
+          nav.nav
+          .dev-desc.dev-desc--works
+            .dev-desc__avatar(style='background-image:url(img/content/avatar.jpg)')
+            .dev-desc__name.dev-desc__name--welcome Богатыренко Владимир
+            .dev-desc__desc.dev-desc__desc--welcome Личный сайт веб разработчика
+          .down
+        section.section.my-work
+          .my-work__title
+            h2.title.works--title
+              | Мои работы
+          .my-work__left
+            h3.subtitle.subtitle--my-work
+              | Сайт школы онлайн образования
+            .my-work__left-skills HTML , CSS, JAVASCRIPT
+            a.my-work__left-link
+              .my-work__left-link-icon
+              .my-work__left-link-text
+          .my-work__right
+        section.section.reviews
+          h2.title.title--reviews
+            | Что обо мне говорят
+          ul.review__list
+            li.review__item
+              .review__avatar(style='background-image:url(img/content/avatar.jpg)')
+              .review__desc
+                | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых
+                | испытаний и бессонных ночей!
+              .review__autor Ковальчук Дмитрий
+              .review__autor-info — основатель Loftschool
+            li.review__item
+              .review__avatar(style='background-image:url(img/content/avatar.jpg)')
+              .review__desc
+                | Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+              .review__autor Сабанцев Владимир
+              .review__autor-info — преподаватель
+          form.msg(action='')
+            h3.subtitle.subtitle--mess
+              | Связаться со мной
+            input.msg__name(type='text', placeholder='Имя')
+            input.msg__email(type='text', placeholder='Email')
+            textarea.msg__text(name='message__text', id='', placeholder='Ваше сообщение')
+            ul.msg__btn-list
+              il.msg__btn-item Отправить
+              il.msg__btn-item Очистить
+          .up

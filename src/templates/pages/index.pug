@@ -1,0 +1,38 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,700i&subset=cyrillic', rel='stylesheet')
+    link(rel='stylesheet', href='styles/normalize.css')
+    link(rel='stylesheet', href='styles/main.min.css')
+    title Портфолио
+  body
+    .wrapper
+      .welcome
+        .content
+          .btn-autoriz
+            .btn-autoriz__name
+              | Авторизоваться
+          .window-autoriz
+            .window-autoriz__content
+              .dev-desc.dev-desc--welcome
+                .dev-desc__avatar(style='background-image:url(../img/content/avatar.jpg)')
+                .dev-desc__name.dev-desc__name--welcome Богатыренко Владимир
+                .dev-desc__desc.dev-desc__desc--welcome Личный сайт веб разработчика
+              ul.social__list
+                li.social__item
+                  a.social__link(href='') vk
+                li.social__item
+                  a.social__link(href='vk') git-hub
+                li.social__item
+                  a.social__link(href='vk') in
+              ul.switch__list
+                li.switch__item
+                  a.switch__item-link(href='') Мои работы
+                li.switch__item
+                  a.switch__item-link(href='') Обо мне
+                li.switch__item
+                  a.switch__item-link(href='') Блог
+            .window-autoriz__btn

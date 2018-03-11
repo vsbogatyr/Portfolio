@@ -1,0 +1,53 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+.section {
+    height: 100vh;
+}
+.welcome, .main__section {
+    height: 100vh;
+    background-image: url('../img/bg/welcome.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+.dev-desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    text-align: center; 
+
+    &__avatar {      
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        overflow: hidden;    
+        background-repeat: no-repeat;
+        background-position: 50%, 50%;
+        background-size: cover;
+        margin-bottom: 25px;
+    }
+
+    &__name {
+        font-size: 28px;
+    }
+
+    &__desc {
+        color: rgba($color: white, $alpha: 0.8);
+    }
+}
+
+.dev-desc__name--welcome {
+    margin-bottom: 9px;
+}
