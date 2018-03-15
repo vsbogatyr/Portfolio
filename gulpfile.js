@@ -4,8 +4,11 @@ const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
-const svgSprite = require('gulp-svg-sprites');
+const svgSprite = require('gulp-svg-sprite');
 const autoprefixer = require('gulp-autoprefixer');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const replace = require('gulp-replace');
 
 const del = require('del');
 
@@ -42,7 +45,29 @@ const paths = {
 //sprite
 function svg() {
     return gulp.src('./src/img/**/*.svg')
-        .pipe(svgSprite())
+        .pipe(svgmin({
+            js2svg: {
+                pretty: true
+            }
+        }))        
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+                $('[style]').removeAttr('style');
+            }
+        }))
+        .pipe(replace('&gt;', '>'))
+        .pipe(svgSprite({
+            mode: {
+                symbol: {
+                    sprite: "sprite.svg",
+                    example: {
+                        dest: 'spriteSvgDemo.html'
+                    }
+                }
+            }
+        }))
         .pipe(gulp.dest(paths.images.dest));
 }
 

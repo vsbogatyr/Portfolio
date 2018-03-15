@@ -12,13 +12,19 @@ html(lang='en')
     .wrapper
       .works
         section.section.main__section.main__section--works
-          ul.social__list
+          ul.social__list.social__list--welcome
             li.social__item
-              a.social__link(href='') vk
+              a.social__link(href='')
+                svg.icon-social(width='26', height='22', fill='#fff')
+                  use(xlink:href='img/symbol/sprite.svg#icons--vk')
             li.social__item
-              a.social__link(href='vk') git-hub
+              a.social__link(href='#')
+                svg.icon-social(width='26', height='22', fill='#fff')
+                  use(xlink:href='img/symbol/sprite.svg#icons--github')
             li.social__item
-              a.social__link(href='vk') in
+              a.social__link(href='#')
+                svg.icon-social(width='26', height='22', fill='#fff')
+                   use(xlink:href='img/symbol/sprite.svg#icons--in')
           nav.nav
           .dev-desc.dev-desc--works
             .dev-desc__avatar(style='background-image:url(img/content/avatar.jpg)')

@@ -9,10 +9,15 @@ h6 {
     font-weight: normal;
 }
 
+.wrapper {
+    position: relative;
+}
+
 .section {
     height: 100vh;
 }
-.welcome, .main__section {
+
+.main__section {
     height: 100vh;
     background-image: url('../img/bg/welcome.png');
     background-repeat: no-repeat;
@@ -36,7 +41,7 @@ h6 {
         background-repeat: no-repeat;
         background-position: 50%, 50%;
         background-size: cover;
-        margin-bottom: 25px;
+        margin-bottom: 10px;
     }
 
     &__name {
@@ -49,5 +54,34 @@ h6 {
 }
 
 .dev-desc__name--welcome {
-    margin-bottom: 9px;
+    margin-bottom: 2px;
+}
+
+.icon-social {
+    width: 26px;
+    height: 22px;
+    opacity: 0.5;
+    fill: #fff;
+    transition: 0.3s;
+    
+    &:hover {
+        fill: #4e8839;
+    }
+}
+
+.social__item {
+    display: inline-block;
+    margin-right: 27px;
+}
+
+.social__item:last-child {
+    margin-right: 0px;
+}
+
+.subtitle {
+    font-size: 35px;
+    text-transform: uppercase;
+    font-family: Sansus-Webissimo-Regular, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+
 }
