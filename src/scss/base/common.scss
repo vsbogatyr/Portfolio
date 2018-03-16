@@ -19,7 +19,7 @@ h6 {
 
 .main__section {
     height: 100vh;
-    background-image: url('../img/bg/welcome.png');
+    background-image: url('../img/bg/mountains.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -45,10 +45,15 @@ h6 {
     }
 
     &__name {
+        color: #455a64;
         font-size: 28px;
+        font-family: "Roboto", Arial, sans-serif;
+        font-weight: 500;
     }
 
     &__desc {
+        font-family: "Roboto", Arial, sans-serif;
+        font-weight: 400;
         color: rgba($color: white, $alpha: 0.8);
     }
 }
@@ -60,12 +65,12 @@ h6 {
 .icon-social {
     width: 26px;
     height: 22px;
-    opacity: 0.5;
-    fill: #fff;
+    fill: #00bfa5;
+    fill-opacity: 0.5;
     transition: 0.3s;
-    
+
     &:hover {
-        fill: #4e8839;
+        fill-opacity: 1;        
     }
 }
 
@@ -80,8 +85,7 @@ h6 {
 
 .subtitle {
     font-size: 35px;
-    text-transform: uppercase;
-    font-family: Sansus-Webissimo-Regular, Arial, Helvetica, sans-serif;
+    font-family: "BERNIERRegular-Regular", Arial, Helvetica, sans-serif;
     font-weight: 400;
-
+    color: #455a64;
 }
