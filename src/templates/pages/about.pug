@@ -1,0 +1,151 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,700i&subset=cyrillic', rel='stylesheet')
+    link(rel='stylesheet', href='styles/normalize.css')
+    link(rel='stylesheet', href='styles/main.min.css')
+    title Портфолио
+  body
+    .wrapper      
+      .full-menu
+        include ../modules/full-menu
+      section.section.hero.hero--about
+          include ../modules/parallax
+          ul.social__list.social__list--header
+            li.social__item
+              a.social__link(href='https://vk.com/bogatyrv' target="_blank")
+                svg.icon-social(width='26', height='22', fill='#fff')
+                  use(xlink:href='img/symbol/sprite.svg#icons--vk')
+            li.social__item
+              a.social__link(href='https://github.com/uamvua' target="_blank")
+                svg.icon-social(width='26', height='22', fill='#fff')
+                  use(xlink:href='img/symbol/sprite.svg#icons--github')
+            li.social__item
+              a.social__link(href='#')
+                svg.icon-social(width='26', height='22', fill='#fff')
+                   use(xlink:href='img/symbol/sprite.svg#icons--in')
+          .hero__menu
+            label.hamburger
+              span.first.hamburger__el
+              span.second.hamburger__el
+              span.third.hamburger__el   
+          svg.hero__bg-text(width='100%', height='100%', fill='#fff')
+              use(xlink:href='img/symbol/sprite.svg#icons--portfolio_header')
+          .dev-desc.dev-desc--header
+            .dev-desc__avatar(style='background-image:url(img/content/avatar.jpg)')
+            .dev-desc__name.dev-desc__name--works Богатыренко Владимир
+            .dev-desc__desc.dev-desc__desc--works Личный сайт веб разработчика
+          .down
+            svg.down-icon(width='26', height='16', fill='#fff')
+              use(xlink:href='img/symbol/sprite.svg#icons--arrow_down')          
+          .box
+            svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+              polygon.left-traingle.left-traingle--about(points='0,0   0,86   500.8,86   500.8,75.5')
+              polygon.right-traingle.right-traingle--about(points='1000,0   1000,86   500,86   500,75.5')
+      section.section.about
+        .about__left                           
+          .about__title
+            svg.about__bg-text(width='245', height='86', fill='#fff')
+              use(xlink:href='img/symbol/sprite.svg#icons--about_header') 
+            h2.title.title--about ОБО МНЕ
+          .about__avatar
+            img.about__avatar-img(src='img/content/avatar.jpg', alt='фото')
+          .about__resume
+            h3.subtitle.subtitle--about Кто я
+            .about__desc Я веб разработчик из Тарко-Сале. Мне 30 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+              |Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+        .about__right
+          .about__block-info
+            .about__block-info-title
+              h3.subtitle.subtitle--about Чем я могу быть вам полезен
+            .about__block-info-desc Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+          .skills
+            .skills__group
+              .dev-desc__name.skills__title Frontend
+              ul.skills__list
+                li.skills__item
+                  svg.circles(viewbox='0 0 110 110')
+                    circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                    circle.circle__second.circle-25(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                  span.skills__item-title HTML5
+                li.skills__item
+                  svg.circles(viewbox='0 0 110 110')
+                    circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                    circle.circle__second.circle-45(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                  span.skills__item-title CSS3
+                li.skills__item
+                  svg.circles(viewbox='0 0 110 110')
+                    circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                    circle.circle__second.circle-75(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                  span.skills__item-title JavaScript & jQuery
+            .skills__group
+              .dev-desc__name.skills__title Backend
+              ul.skills__list
+                li.skills__item
+                  svg.circles(viewbox='0 0 110 110')
+                    circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                    circle.circle__second.circle-25(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                  span.skills__item-title PHP
+                li.skills__item
+                  svg.circles(viewbox='0 0 110 110')
+                    circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                    circle.circle__second.circle-45(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                  span.skills__item-title mySQL
+                li.skills__item
+                  svg.circles(viewbox='0 0 110 110')
+                    circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                    circle.circle__second.circle-75(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                  span.skills__item-title Node.js & npm
+                li.skills__item
+                  svg.circles(viewbox='0 0 110 110')
+                    circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                    circle.circle__second.circle-75(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                  span.skills__item-title Mongo.db
+            .skills__group
+              .dev-desc__name.skills__title WorkFlow
+              ul.skills__list
+                li.skills__item
+                  svg.circles(viewbox='0 0 110 110')
+                    circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                    circle.circle__second.circle-25(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                  span.skills__item-title Git
+                li.skills__item
+                  svg.circles(viewbox='0 0 110 110')
+                    circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                    circle.circle__second.circle-45(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                  span.skills__item-title Gulp
+                li.skills__item
+                  svg.circles(viewbox='0 0 110 110')
+                    circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
+                    circle.circle__second.circle-75(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
+                  span.skills__item-title Bower                
+      section.section.map
+        .contacts
+          h3.subtitle.subtitle--contacts Контакты
+          ul.contacts__list
+            li.contacts__item
+              a.contacts__link(href="skype:vlsbogatyr")                
+                svg.contacts__icon-img(width='25px', height='25px', fill='#00bea4')
+                  use(xlink:href='img/symbol/sprite.svg#icons--skype')                
+                .contacts__contact vlsbogatyr
+            li.contacts__item
+              a.contacts__link(href="mailto:vsbogatyr@mail.ru")                
+                svg.contacts__icon-img(width='25px', height='25px', fill='#00bea4')
+                  use(xlink:href='img/symbol/sprite.svg#icons--envelope')                
+                .contacts__contact vsbogatyr@mail.ru
+            li.contacts__item
+              a.contacts__link(href="tel:012345678")                
+                svg.contacts__icon-img(width='25px', height='25px', fill='#00bea4')
+                  use(xlink:href='img/symbol/sprite.svg#icons--phone')                
+                .contacts__contact 012345678
+            li.contacts__item
+              a.contacts__link(href="")                
+                svg.contacts__icon-img(width='25px', height='25px', fill='#00bea4')
+                  use(xlink:href='img/symbol/sprite.svg#icons--map_marker')                
+                .contacts__contact Тарко-Сале
+      section.footer
+        include ../modules/footer
+    include ../modules/script        

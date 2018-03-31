@@ -1,0 +1,84 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,700i&subset=cyrillic', rel='stylesheet')
+    link(rel='stylesheet', href='styles/normalize.css')
+    link(rel='stylesheet', href='styles/main.min.css')
+    title Портфолио
+  body
+    .wrapper
+        section.section.hero.hero--blog
+            .full-menu
+                include ../modules/full-menu
+            include ../modules/parallax
+            ul.social__list.social__list--header
+                li.social__item
+                    a.social__link(href='https://vk.com/bogatyrv' target="_blank" )
+                        svg.icon-social(width='26', height='22', fill='#fff')
+                            use(xlink:href='img/symbol/sprite.svg#icons--vk')
+                li.social__item
+                    a.social__link(href='https://github.com/uamvua' target="_blank")
+                        svg.icon-social(width='26', height='22', fill='#fff')
+                            use(xlink:href='img/symbol/sprite.svg#icons--github')
+                li.social__item
+                    a.social__link(href='#')
+                        svg.icon-social(width='26', height='22', fill='#fff')
+                            use(xlink:href='img/symbol/sprite.svg#icons--in')
+            .hero__menu
+                label.hamburger
+                    span.first.hamburger__el
+                    span.second.hamburger__el
+                    span.third.hamburger__el              
+            svg.hero__bg-text.hero__bg-text--blog(width='100%', height='100%', fill='#fff')
+                use(xlink:href='img/symbol/sprite.svg#icons--blog_header')   
+            .dev-desc.dev-desc--header 
+                .dev-desc__avatar(style='background-image:url(img/content/avatar.jpg)')                              
+                h2.title.title--blog Блог            
+                .dev-desc__desc.dev-desc__desc--blog Статьи, которые я написал                               
+            .box
+                svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+                    polygon.left-traingle.traingle--white(points='0,0   0,86   500.8,86   500.8,75.5')
+                    polygon.right-traingle.traingle--white(points='1000,0   1000,86   500,86   500,75.5')
+        section.main             
+            nav.nav-blog
+                .open-menu
+                ul.nav-blog__list
+                    li.nav-blog__item.active
+                        a.nav-blog__link.active(href="") 
+                            span Самое важное в SASS
+                    li.nav-blog__item
+                        a.nav-blog__link(href="") 
+                            span Приёмы в вёрстке, без которых не обходится ни один сайт
+                    li.nav-blog__item
+                        a.nav-blog__link(href="") 
+                            span Самый необходимый набор Gulp плагинов
+                    li.nav-blog__item
+                        a.nav-blog__link(href="") 
+                            span Почему я выбрал Jade
+            ul.article-list
+                li.article-item
+                    article.article
+                        h3.subtitle.article__title 
+                            span Самое важное в SASS                                         
+                        .article__data 
+                            span 22 ноября 2016
+                        .article__content
+                            p.article__text Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                            |Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                            .article__img
+                                img(src="img/content/code.jpg", alt="" style="width: 100%; margin-top: 20px")
+                li.article-item
+                    article.article
+                        h3.subtitle.article__title Приёмы в вёрстке, без которых не обходится ни один сайт                                    
+                        .article__data 13 ноября 2016
+                        .article__content 
+                            p.article__text Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
+                            |Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
+                            .article__img
+                                img(src="", alt="")
+        section.footer
+          include ../modules/footer      
+    include ../modules/script

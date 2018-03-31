@@ -1,0 +1,346 @@
+.left-traingle.left-traingle--about {
+    fill: #efeee9;
+    @include phones {
+        fill: #eeebdf;
+    }
+}
+
+.right-traingle.right-traingle--about {
+    fill: #eeebdf;
+}
+
+.about {
+    display: flex;   
+    width: 100%;
+    height: auto;
+
+    &__title {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        padding-bottom: rem(35px);
+
+        @include tablets{
+            padding-bottom: 0;            
+        }
+        @include phones {
+            background: #eeebdf;
+        }
+    }
+
+    &__bg-text {
+        position: absolute;        
+        left: 50%;
+        transform: translateX(-50%);
+        top: rem(-49px);
+        width: 60%;
+        height: auto;
+        fill-opacity: 0.07;
+        fill: #6d7070;
+
+        @include tablets {
+            width: 33%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        
+        @include phones {
+            top: rem(-30px);
+        }
+    }
+
+    &__resume {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include tablets {
+            width: 95%;
+        }        
+        @include phones {
+            width: 95%;
+        } 
+    }
+
+    @include tablets {
+        height: auto;
+        flex-direction: column;
+    }
+    @include phones {
+        height: auto;
+        flex-direction: column;
+    }
+
+    &__block-info {
+        margin-bottom: rem(60px);
+        width: 100%;      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      
+
+        &-title {
+            text-align: center;
+        }
+
+        &-desc {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            @include tablets {
+                width: 61%; 
+            }            
+            @include phones {
+                width: 95%; 
+            }     
+        }
+    }        
+}
+
+.title--about {
+    @include tablets{
+        padding: rem(50px) 0;
+        font-size: rem(49px);
+    }
+}
+
+.about__avatar {
+    
+    &-img {
+        max-width: rem(440px);
+        height: rem(390px);
+        overflow: hidden;
+        
+        @include phones {
+            width: 100%;
+            height: auto;
+        }
+    }    
+}
+
+.about__left, .about__right {
+    width: 50%;
+
+    @include tablets {
+        width: 100%
+    } 
+    @include phones {
+        width: 100%
+    } 
+}
+
+.about__left {
+    background: #efeee9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;   
+}
+
+.subtitle--about {
+    padding: rem(40px) 0;
+    @include phones {
+        padding: rem(30px) 0;
+    } 
+}
+
+.about__desc{
+    width: 73%;
+
+    @include tablets {
+        width: 61%;
+    } 
+
+    @include phones {
+        width: 100%;
+        padding-bottom: rem(27px);
+    } 
+
+}
+
+.about__right {
+    background: #eeebdf;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+.map {
+    height: 100vh;
+    background: url(../img/bg/map.png) no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include phones {
+        justify-content: initial;  
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    width: rem(380px);
+    background: rgba(252, 252, 252, 0.85);
+    border-radius: rem(5px);
+    padding: rem(35px);
+    @include phones {
+        width: 100%;
+        border-radius: 0;
+        background: rgba(252, 252, 252, 1);
+
+    }
+    
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        margin-bottom: rem(25px);
+        white-space: pre-wrap;
+
+            &:last-child {
+                margin-bottom: 0;
+            }    
+    }
+
+    &__contact {
+        font-weight: 500;
+        color: rgba(69, 90, 100, 0.8);
+        display: inline-block;
+    }
+
+    &__icon-img {
+        margin-right: rem(10px);
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+}
+
+.subtitle--contacts {
+    display: flex;
+    justify-content: center;
+    margin-bottom: rem(35px);
+}
+
+//skills
+.skills {
+    @include tablets {
+        text-align: center;       
+    }  
+}
+
+.skills__title {
+    color: #455a64;
+    margin-bottom: rem(20px);
+}
+
+.skills__group {
+    margin-bottom: rem(40px);
+}
+
+.circles {
+    fill: none;
+    stroke-width: 20;
+  }
+  .circle__first {
+    stroke: #dfdcd5;
+  }
+  .circle__second {
+    stroke: #1bb696;
+    stroke-dasharray: .0010 282.6;
+    transition: all 1s;
+  }
+  
+  .skills__item {
+    position: relative;
+    display: inline-block;
+    width: rem(110px);
+    height: rem(110px);
+    margin-right: rem(35px);
+  }
+  
+  .skills__item-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: rem(13px);
+    font-family: "Roboto", Arial, sans-serif;
+    color: #1bb696;
+    font-weight: 500;
+  }
+  .circles:hover .circle-0 {
+     stroke-dasharray: .001 282.6;
+  }
+  .circles:hover .circle-5 {
+    stroke-dasharray: 14.13 282.6;
+  }
+  .circles:hover .circle-10 {
+     stroke-dasharray: 28.26 282.6;
+  }
+  .circles:hover .circle-15 {
+     stroke-dasharray: 42.39 282.6;
+  }
+  .circles:hover .circle-20 {
+     stroke-dasharray: 56.52 282.6;
+  }
+  .circles:hover .circle-25 {
+     stroke-dasharray: 70.65 282.6;
+  }
+  .circles:hover .circle-30 {
+     stroke-dasharray: 84.78 282.6;
+  }
+  .circles:hover .circle-35 {
+     stroke-dasharray: 98.91 282.6;
+  }
+  .circles:hover .circle-40 {
+     stroke-dasharray: 113.04 282.6;
+  }
+  .circles:hover .circle-45 {
+     stroke-dasharray: 127.17 282.6;
+  }
+  .circles:hover .circle-50 {
+     stroke-dasharray: 141.3 282.6;
+  }
+  .circles:hover .circle-55 {
+     stroke-dasharray: 155.43 282.6;
+  }
+  .circles:hover .circle-60 {
+     stroke-dasharray: 169.56 282.6;
+  }
+  .circles:hover .circle-65 {
+     stroke-dasharray: 183.69 282.6;
+  }
+  .circles:hover .circle-70 {
+     stroke-dasharray: 197.82 282.6;
+  }
+  .circles:hover .circle-75 {
+     stroke-dasharray: 211.95 282.6;
+  }
+  .circles:hover .circle-80 {
+     stroke-dasharray: 226.08 282.6;
+  }
+  .circles:hover .circle-85 {
+     stroke-dasharray: 240.21 282.6;
+  }
+  .circles:hover .circle-90 {
+     stroke-dasharray: 254.34 282.6;
+  }
+  .circles:hover .circle-95 {
+     stroke-dasharray: 268.47 282.6;
+  }
+  .circles:hover .circle-100 {
+     stroke-dasharray: 282.6 282.6;
+  }

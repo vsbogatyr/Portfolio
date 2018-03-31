@@ -1,0 +1,212 @@
+.my-work {
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+        height: auto;
+    }
+
+    &__title {
+        position: relative;
+        height: 19%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        background: #faf8f0;
+        z-index: 10;
+        @include tablets {
+            padding: rem(27px) 0;
+        }
+    }
+}
+
+.my-work__slider {
+    display: flex;
+    height: 81%;
+    color: #fff;
+    font-weight: bold;
+    //flex-direction: column;
+    flex-wrap: wrap;
+    @include tablets {
+        flex-wrap: nowrap;
+    }
+
+    &-skills {
+        border-top: rem(2px) solid;
+        border-bottom: rem(2px) solid;
+        width: 100%;
+        //text-align: center;
+        padding: rem(20px) rem(0px);
+        color: #20b5a1;
+        margin-top: rem(40px);
+        @include tablets {
+            margin-top: rem(7px);
+            padding: rem(16px) rem(0px);
+            font-size: rem(16px);
+            width: 70%
+        }
+        @include phones {
+            width: 100%;
+            font-size: rem(14px);
+            padding: rem(9px) rem(0px);
+        }
+    }
+}
+
+.my-work__slider-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #f0efe9;
+    width: 50%;
+    height: 100%;
+    @include tablets {
+        width: 100%;
+        order: 2;
+        height: auto;
+        padding: rem(40px) 0 rem(60px) 0;
+    }
+    @include phones {
+        padding: rem(30px) 0;
+    }
+
+    &-block {
+        display: flex;
+        width: 70%;
+        flex-direction: column;
+        justify-content: center;
+        //align-items: center;
+        //text-align: center;
+        @include phones {
+            width: 100%;
+        }
+    }
+
+    &-btn {
+        &-link {
+            display: flex;
+            background: #00bfa5;
+            width: rem(200px);
+            height: rem(45px);
+            justify-content: center;
+            align-items: center;
+            border-radius: rem(5px);
+            margin-top: rem(40px);
+            transition: 0.3s;
+            @include tablets {
+                margin-top: rem(21px);
+            }
+            &:hover {
+                cursor: pointer;
+                background: #009688;
+            }
+            &-icon {
+                margin-right: rem(11px);
+            }
+        }        
+    }    
+}
+
+.my-work__slider-display {
+    background: #efebe0;
+    width: 50%;
+    //height: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tablets {
+        width: 100%;
+        order: 1;
+        height: rem(527px);
+    }
+    @include phones {
+        height: rem(257px);
+    }
+
+    &-img {
+        height: 57%;
+        @include tablets {
+            height: 73%;
+        }
+        @include phones {
+            height: 63%;
+        }
+    }
+}
+
+.my-work__slider-btns {
+    display: flex;
+    position: relative;    
+    width: 50%;
+    height: 30%;
+    
+    @include tablets {
+        height: rem(215px);
+        width: 100%;
+        order: 3;
+    }
+    @include phones {
+        height: rem(90px);
+    }
+
+    &:after {
+        content:"";
+        background: rgba(136, 131, 114, 0.5);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    &-down, &-up {
+        position: relative;
+        display: flex;
+        width: 50%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-down-icon, &-up-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 10;
+        fill: #ffffff;
+        fill-opacity: 0.7;
+        transition: 0.3s;
+    }
+
+    &-down-icon, &-up-icon {
+        &:hover {
+            cursor: pointer;
+            fill-opacity: 1;                
+        }       
+    }    
+
+    &-down-img, &-up-img {
+        height: 80%;
+    }
+}
+
+
+.my-work__bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    fill: #6d7070;
+    fill-opacity: 0.07;
+
+    @include phones {
+        width: 82%;
+    }
+}
+
+.subtitle.subtitle--my-work:after, .subtitle.subtitle--my-work:before {
+    display: none;
+}

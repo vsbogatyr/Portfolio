@@ -10,63 +10,118 @@ html(lang='en')
     title Портфолио
   body
     .wrapper
-      .works
-        section.section.main__section.main__section--works
-          ul.social__list.social__list--works
+        .full-menu
+          include ../modules/full-menu
+        section.section.hero.hero--works
+          include ../modules/parallax
+          ul.social__list.social__list--header
             li.social__item
-              a.social__link(href='')
+              a.social__link(href='https://vk.com/bogatyrv' target="_blank")
                 svg.icon-social(width='26', height='22', fill='#fff')
                   use(xlink:href='img/symbol/sprite.svg#icons--vk')
             li.social__item
-              a.social__link(href='#')
-                svg.icon-social (width='26', height='22', fill='#fff')
+              a.social__link(href='https://github.com/uamvua' target="_blank")
+                svg.icon-social(width='26', height='22', fill='#fff')
                   use(xlink:href='img/symbol/sprite.svg#icons--github')
             li.social__item
               a.social__link(href='#')
                 svg.icon-social(width='26', height='22', fill='#fff')
                    use(xlink:href='img/symbol/sprite.svg#icons--in')
-          nav.nav
-          .dev-desc.dev-desc--works
+          .hero__menu
+            label.hamburger
+                span.first.hamburger__el
+                span.second.hamburger__el
+                span.third.hamburger__el  
+          svg.hero__bg-text(width='100%', height='100%', fill='#fff')
+              use(xlink:href='img/symbol/sprite.svg#icons--portfolio_header')
+          .dev-desc.dev-desc--header
             .dev-desc__avatar(style='background-image:url(img/content/avatar.jpg)')
-            .dev-desc__name.dev-desc__name--welcome Богатыренко Владимир
-            .dev-desc__desc.dev-desc__desc--welcome Личный сайт веб разработчика
+            .dev-desc__name.dev-desc__name--works 
+              span Богатыренко Владимир
+            .dev-desc__desc.dev-desc__desc--works 
+              span Личный сайт веб разработчика
           .down
+            svg.down-icon(width='26', height='16', fill='#fff')
+              use(xlink:href='img/symbol/sprite.svg#icons--arrow_down')          
+          .box
+            svg.traingle(xmlns='http://www.w3.org/2000/svg', viewbox='0 0 1000 85', preserveaspectratio='none')
+              polygon.left-traingle(points='0,0   0,86   500.8,86   500.8,75.5')
+              polygon.right-traingle(points='1000,0   1000,86   500,86   500,75.5')
         section.section.my-work
           .my-work__title
+            svg.my-work__bg-text(width='100%', height='100%', fill='#6d7070')
+              use(xlink:href='img/symbol/sprite.svg#icons--works_header')
             h2.title.works--title
-              | Мои работы
-          .my-work__left
-            h3.subtitle.subtitle--my-work
-              | Сайт школы онлайн образования
-            .my-work__left-skills HTML , CSS, JAVASCRIPT
-            a.my-work__left-link
-              .my-work__left-link-icon
-              .my-work__left-link-text
-          .my-work__right
+              span Мои работы
+          .my-work__slider
+            .my-work__slider-display
+              img(src="img/content/works/work-1.png", class="my-work__slider-display-img")
+            .my-work__slider-info
+              .my-work__slider-info-block
+                h3.subtitle.subtitle--my-work
+                  span Сайт школы онлайн образования
+                .my-work__slider-skills HTML , CSS, JAVASCRIPT
+                .my-work__slider-info-btn
+                  a.my-work__slider-info-btn-link
+                    .my-work__slider-info-btn-link-icon
+                      svg.icons-link(width='20', height='19', fill='#fff')
+                        use(xlink:href='img/symbol/sprite.svg#icons--link')
+                    .my-work__slider-info-btn-link-text Посмотреть сайт
+            //- .my-work__slider-btns
+            //-   .my-work__slider-btns-down
+            //-     img(src="img/content/works/work-2.png", class="my-work__slider-btns-down-img")
+            //-     svg.my-work__slider-btns-down-icon(width='45', height='26', fill='#fff')
+            //-       use(xlink:href='img/symbol/sprite.svg#icons--portf_arrow_down')    
+            //-   .my-work__slider-btns-up
+            //-     img(src="img/content/works/work-3.png", class="my-work__slider-btns-up-img")
+            //-     svg.my-work__slider-btns-up-icon(width='45', height='26', fill='#fff')
+            //-       use(xlink:href='img/symbol/sprite.svg#icons--portf_arrow_up')              
         section.section.reviews
-          h2.title.title--reviews
-            | Что обо мне говорят
-          ul.review__list
-            li.review__item
-              .review__avatar(style='background-image:url(img/content/avatar.jpg)')
-              .review__desc
-                | Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых
-                | испытаний и бессонных ночей!
-              .review__autor Ковальчук Дмитрий
-              .review__autor-info — основатель Loftschool
-            li.review__item
-              .review__avatar(style='background-image:url(img/content/avatar.jpg)')
-              .review__desc
-                | Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
-              .review__autor Сабанцев Владимир
-              .review__autor-info — преподаватель
+          .reviews__title
+            svg.reviews__bg-text(width='100%', height='100%', fill='#6d7070')
+                use(xlink:href='img/symbol/sprite.svg#icons--about_header')
+            h2.title.title--reviews
+              span Что обо мне говорят
+          .reviews__block
+            ul.reviews__list
+              li.reviews__item
+                img(src="img/bg/quotation.png", class="reviews__item-img")
+                .reviews__desc
+                  span Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых
+                  | испытаний и бессонных ночей!
+                .reviews__autor  
+                  .reviews__avatar(style='background-image:url(img/content/kovalchuk.png)')
+                  .reviews__autor-info                               
+                    .reviews__autor-name Ковальчук Дмитрий
+                    .reviews__autor-position основатель Loftschool
+              li.reviews__item
+                img(src="img/bg/quotation.png", class="reviews__item-img")              
+                .reviews__desc
+                  span Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+                .reviews__autor  
+                  .reviews__avatar(style='background-image:url(img/content/sabantcev.png)')
+                  .reviews__autor-info                             
+                    .reviews__autor-name 
+                      span Сабанцев Владимир
+                    .reviews__autor-position 
+                      span преподаватель
           form.msg(action='')
-            h3.subtitle.subtitle--mess
-              | Связаться со мной
-            input.msg__name(type='text', placeholder='Имя')
-            input.msg__email(type='text', placeholder='Email')
-            textarea.msg__text(name='message__text', id='', placeholder='Ваше сообщение')
-            ul.msg__btn-list
-              il.msg__btn-item Отправить
-              il.msg__btn-item Очистить
+            .msg__blur
+            .msg__wrapper
+              .msg__content
+                h3.subtitle.subtitle--msg
+                  span Связаться со мной           
+                input.msg__input.msg__input-name(type='text', placeholder='Имя')
+                input.msg__input.msg__input-email(type='text', placeholder='Email')
+                textarea.msg__input.msg__input-text(name='message__text', id='', placeholder='Ваше сообщение')
+              .msg__btns              
+                button.msg__btn.msg__btn--send Отправить              
+                button.msg__btn.msg__btn--reset Очистить
           .up
+            svg.up__icon(width='26', height='16', fill='#fff')
+              use(xlink:href='img/symbol/sprite.svg#icons--arrow_down')
+        section.footer
+          include ../modules/footer          
+    include ../modules/script
+            
+

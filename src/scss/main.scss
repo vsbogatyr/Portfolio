@@ -1,3 +1,14 @@
+//config
+@import "config/mixins.scss";
+
+//resolutions
+$retina: 1800px;
+$tablets: 768px;
+$phones: 480px;
+
+//media
+@import "misc/media.scss";
+
 //base
 @import "base/font.scss";
 @import "base/base.scss";
@@ -5,4 +16,9 @@
 
 //page
 @import "page/welcome.scss";
-@import "page/works/main__section-works.scss"
+@import "page/works/hero__section-works.scss";
+@import "page/works/section-works.scss";
+@import "page/works/section-reviews.scss";
+@import "page/footer.scss";
+@import "page/about/about.scss";
+@import "page/blog/blog.scss"

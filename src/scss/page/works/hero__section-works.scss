@@ -1,0 +1,56 @@
+.hero--works {
+    position: relative;
+}
+
+.hero__bg-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+    fill-opacity: 0.06;
+
+    @include tablets {
+      display: none;
+    }    
+   
+}
+
+.box {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .traingle {
+    display: block;
+  }
+  
+  .traingle .left-traingle{
+    fill: #faf8f0;
+  }
+  .traingle .right-traingle{
+    fill: #faf8f0;
+  }
+
+.down {
+    display: inline-block;
+    position: absolute;
+    bottom: 11%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    &:hover {
+      cursor: pointer;      
+    }
+    &-icon {
+      fill: #ffffff;
+      fill-opacity: 0.7;
+      transition: 0.3s;
+    }
+    &-icon:hover {
+      fill-opacity: 1;      
+    }
+}

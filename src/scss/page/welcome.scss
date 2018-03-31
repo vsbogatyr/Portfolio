@@ -7,32 +7,114 @@
     position: relative;
 }
 
+.hero__header {
+    display: flex;
+    justify-content: center;
+    margin-top: rem(10px);
+}
+
 .btn-autoriz {
     position: absolute;   
-    padding: 11px 27px;
-    border: 1px solid white;
-    border-radius: 5px;
+    padding: rem(11px) rem(27px);
+    border: rem(1px) solid white;
+    border-radius: rem(5px);
     color: white;
     display: inline-block;
-    top: 20px;
-    right: 20px;
+    top: rem(20px);
+    right: rem(20px);
+    background: none;
+    outline: none;
+    z-index: 10;
+    transition: 0.3s;
+
+    @include phones {
+        top: initial;
+        right: initial;
+        }
 
     &__name {
-       font-weight: 500;
+       font-weight: 500;       
     }
+    &:hover {
+        color: #00bfa5;
+        background: #ffffff;
+        cursor: pointer;
+    }
+}
+
+.container {
+    width: rem(380px);
+    position: relative;
+    -webkit-perspective: 800px;
+    -moz-perspective: 800px;
+    -o-perspective: 800px;
+    perspective: 800px;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-transition: -webkit-transform s;
+    -moz-transition: -moz-transform 1s;
+    -o-transition: -o-transform 1s;
+    transition: transform 1s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transform-origin: 50% 50%;
+}
+.card .window {
+    display: block;
+    width: 100%;
+    position: absolute;       
+}
+
+.card div {
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.card .back {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
+}
+
+.card.flipped {   
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
+    -o-transform: rotateY( 180deg );
+    transform: rotateY( 180deg );
 }
 
 .window {
     position: absolute;
-    width: 380px;
-    border-radius: 5px;
+    width: rem(380px);
+    border-radius: rem(5px);
     background: rgba(252, 252, 252, 0.85);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);    
-
+    transform: translate(-50%, -50%);
+    
+    @include tablets {
+        width: rem(348px);
+        }
+    @include phones {
+        width: 95%;
+        }
+    
     &-welcome__content {
-       margin-top: 40px;            
+       margin-top: rem(40px);
+       display: flex;
+       align-items: center;
+       flex-direction: column;
+    @include phones {
+        margin-top: 9%;
+        }                 
     }    
 }
 
@@ -40,13 +122,31 @@
     display: none;
 }
 
-.dev-desc__desc--welcome {
-    margin-bottom: 33px;
+.dev-desc--welcome {
+    margin-bottom: rem(33px);
     color: #455a64;
+    @include phones {
+        margin-bottom: 5%;
+    }
+}
+
+.dev-desc__name--welcome {
+    margin-bottom: rem(2px);
+}
+
+.dev-desc__desc--welcome {
+    color: rgba(69, 90, 100, 0.8);
 }
 
 .social__list--welcome {
-    margin-bottom: 35px;
+    margin-bottom: rem(35px);
+    @include phones {
+        margin-bottom: 9%;
+        }
+}
+
+.icon-social--welcome {    
+    fill: #00bfa5;  
 }
 
 .switch__list {
@@ -55,13 +155,14 @@
     background: rgba(0, 191, 165, 0.85);
 }
 
-.switch__item{
-    border-right: 2px solid;
+.switch__item {
+    border-right: rem(2px) solid;
     border-color: rgba(222, 227, 231, 0.5);
-    flex: auto;
+    display: inline-block;
     width: 100%;
-    padding: 14px 0px;
+    height: rem(45px);
     text-align: center;
+    transition: 0.3s;
 
     &:hover {
         background: rgba(0, 150, 136, 0.85);        
@@ -90,17 +191,38 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 30px 20px;
+        padding: rem(30px) rem(20px);
+    }
+
+    &__input-block {
+        width: 100%;
+        height: rem(45px);
+        margin-bottom: rem(20px);
+        display: flex;
+        &-img {
+            width: rem(45px);
+            height: 100%;
+            background: #f0efe9;
+            position: relative;
+            border-radius: rem(5px) 0 0 rem(5px);
+        }
+            
+        &-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
     }
 
     &__input {
         width: 100%;
-        border-radius: 5px;
-        height: 45px;
-        margin-bottom: 20px;
+        height: 100%;
+        border-radius: 0 rem(5px) rem(5px) 0;        
         outline: none;
-        /*background: url('../img/icons/login.svg') no-repeat;
-        background-position: 15px; */
+        border: none;
+        padding-left: rem(19px);
+        
     }
 
     &__captcha {
@@ -109,42 +231,21 @@
         align-items: center;
         
         &-notrobot {
-            margin-bottom: 5px;
+            margin-bottom: rem(5px);
         }
         
         &-notrobot-text {
-            margin-bottom: 7px;
+            margin-bottom: rem(7px);
         }
 
         &-radio-text {
             display: inline-block;
-            padding-left: 10px;
+            padding-left: rem(10px);
         }
     }
 }
-
-.title--autoriz {
-    display: flex;
-    align-items: center;
-    margin-bottom: 27px;
-}
-
-.title--autoriz:before {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 3px;
-    background: rgba(52, 65, 66, 0.2);
-    margin-right: 20px;
-}
-
-.title--autoriz:after {
-    content: "";
-    display: inline-block;
-    width: 20px;
-    height: 3px;
-    background: rgba(52, 65, 66, 0.2);
-    margin-left: 20px;    
+.title--autoriz {   
+    margin-bottom: rem(27px);  
 }
 
 .form-autoriz__captcha {
@@ -153,23 +254,23 @@
 
 .form-autoriz__captcha-check {
     position: absolute;
-    top: 0px;
-    left: -9999px;
+    top: rem(0px);
+    left: rem(-9999px);
 }
 
 .form-autoriz__captcha-check-fake {
-    width: 20px;
-    height: 20px;
+    width: rem(20px);
+    height: rem(20px);
     background-color: #00bfa5;
     position: relative;
     display: inline-block;
-    border-radius: 2px;
+    border-radius: rem(2px);
 }
 
 .form-autoriz__captcha-check-fake:after {
     content: "";
-    width: 20px;
-    height: 20px;
+    width: rem(20px);
+    height: rem(20px);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -183,20 +284,20 @@
 
 .form-autoriz__captcha-human {
     display: flex;
-     margin-top: 3px;
-     margin-bottom: 10px;
+     margin-top: rem(3px);
+     margin-bottom: rem(10px);
 
     &-text {
         display: inline-block;
-        padding-left: 11px;
+        padding-left: rem(11px);
     }    
 }
 
 .form-autoriz__captcha-radio {
-    margin-right: 40px;
+    margin-right: rem(40px);
 
     &:last-child {
-        margin-right: 0px;
+        margin-right: rem(0px);
     }
     
     &-text {
@@ -205,13 +306,13 @@
     
     &-btn {
         position: absolute;
-        top: 0px;
-        left: -9999px;
+        top: rem(0px);
+        left: rem(-9999px);
     }
 
     &-fake {
-        width: 20px;
-        height: 20px;
+        width: rem(20px);
+        height: rem(20px);
         border-radius: 50%;
         display: inline-block;
         vertical-align: middle;
@@ -234,8 +335,8 @@
 }
 
 .form-autoriz__captcha-radio-btn:checked + .form-autoriz__captcha-radio-fake:after {
-    width: 10px;
-    height: 10px;
+    width: rem(10px);
+    height: rem(10px);
 }
 
 .form-autoriz__captcha-notrobot {
@@ -246,12 +347,31 @@
     }
 }
 
-.footer {
+.footer__welcome {
     width: 100%;
-    bottom: 5%;
+    bottom: rem(30px);
     position: absolute;
     color: white;
     display: flex;
     justify-content: center;
     font-weight: 300;
+
+    @include tablets {
+        font-size: rem(14px);
+        bottom: 3%;
+        }
+    @include phones {
+        text-align: center;
+        width: 85%;
+        bottom: 2%;
+        }
 }
+
+input::-webkit-input-placeholder { 
+    color:rgba(55, 62, 66, 0.5)
+}
+input::-moz-placeholder { color:rgba(55, 62, 66, 0.5) } /* Firefox 19+ */
+
+input:-moz-placeholder  {color:rgba(55, 62, 66, 0.5) } /* Firefox 18- */
+
+input:-ms-input-placeholder {color:rgba(55, 62, 66, 0.5) } 

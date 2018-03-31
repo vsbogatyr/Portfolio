@@ -1,0 +1,234 @@
+.reviews {
+    background: url(../img/bg/bg-works.png) center center no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    position: relative;
+    background-size: cover;   
+    @include phones {
+        text-align: center;
+    }
+
+    &__title {
+        position: relative;
+        display: flex;
+        height: 18%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin: rem(40px) 0;
+        @include tablets {
+            height: rem(134px);
+            margin: 0;
+        }
+    }
+
+    &__bg-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 95%;
+        fill: #6d7070;
+        fill-opacity: 0.06;
+        @include phones {
+            width: 77%;
+        }
+
+    }
+
+    &__block {
+        width: rem(780px);
+        @include phones {
+            width: 95%;
+        }       
+    }
+
+    &__list {
+        display: flex;
+        width: 100%;
+        @include phones {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        width: 50%;
+        padding-left: rem(20px);
+        @include phones {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+
+    &__desc {
+        margin: rem(25px) 0;
+        @include phones {
+            text-align: left;
+        }
+    }
+
+    &__autor {
+        display: flex;
+
+        &-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: #20b5a1;
+        }
+
+        &-name {
+            font-weight: 700;
+        }
+    }    
+
+    &__avatar {
+        width: rem(80px);
+        height: rem(80px);
+        border-radius: 50%;
+        overflow: hidden;    
+        background-repeat: no-repeat;
+        background-position: 50%, 50%;
+        background-size: cover;
+        margin-right: rem(20px);
+    }
+}
+
+.msg {
+    width: rem(380px);
+    min-height: rem(437px);
+    border-radius: rem(5px); 
+    margin-top: rem(45px);
+    margin-bottom: rem(156px);
+    position: relative;
+    overflow: hidden;
+    &__wrapper {
+        width: 100%;
+        display: flex;
+        z-index: 20;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;   
+    }
+    @include tablets {
+        margin-bottom: rem(170px);
+    }
+    @include phones {
+        width: 95%;
+        margin-bottom: rem(105px);
+    }     
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        @include tablets {
+            width: 100%;
+            align-items: center;            
+        } 
+    }
+
+    &__input {
+        margin-bottom: rem(20px);
+        border-radius: rem(5px);
+        padding-left: rem(20px);       
+        border: 1px solid transparent;
+        &:focus {
+            outline: none;            
+            border-radius: 5px;
+            border-color: #00bfa5;
+        }
+        @include tablets {
+            width: 85%;            
+        }
+        
+    }
+
+    &__input-name, &__input-email {
+        height: rem(45px);
+    }
+
+    &__input-text {
+        height: rem(140px);
+        resize: none;
+        padding-top: 18px;
+    }
+
+    &__btns-list {
+        display: flex;
+        width: 100%;
+        background: rgba(0, 191, 165, 0.85);        
+    }
+
+    &__btns {
+        display: flex;
+        width: 100%;        
+    }
+
+    &__btn {
+        width: 50%;
+        border: none;
+        border-right: rem(2px) solid;
+        border-color: rgba(222, 227, 231, 0.5);
+        padding: rem(14px) rem(0px);
+        text-align: center;
+        background: rgba(0, 191, 165, 0.3);
+        color: white;            
+        font-family: "Roboto", Arial, sans-serif;
+        font-weight: 500;
+        
+        &:last-child {
+            border-right: none;
+        }
+        
+        &:hover {            
+            cursor: pointer; 
+            background: rgba(0, 150, 136, 0.85);
+        }
+    }        
+}
+
+.msg__blur {   
+    background: url(../img/bg/bg-works.png) center no-repeat;
+    filter: blur(10px);    
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;    
+}
+
+.subtitle--msg {
+    margin: rem(35px) 0;
+}
+
+.up {
+    transform: rotate(180deg);
+    //margin-bottom: rem(70px);
+    z-index: 10;
+    position: absolute;
+    bottom: rem(70px);    
+    @include phones {
+        bottom: rem(35px);
+     }
+
+}
+.up__icon {
+    width: rem(26px);
+    height: rem(16px);
+    z-index: 10;
+    fill: #ffffff;
+    fill-opacity: 0.7;
+    transition: 0.3s;
+
+    &:hover {
+        cursor: pointer;
+        fill-opacity: 1;
+    }
+}

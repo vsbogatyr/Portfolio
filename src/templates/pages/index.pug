@@ -9,30 +9,78 @@ html(lang='en')
     link(rel='stylesheet', href='styles/main.min.css')
     title Портфолио
   body
-    .wrapper
-      .welcome
-        .content
-          .btn-autoriz
-            .btn-autoriz__name
-              | Авторизоваться
-          .window-autoriz
-            .window-autoriz__content
-              .dev-desc.dev-desc--welcome
-                .dev-desc__avatar(style='background-image:url(img/content/avatar.jpg)')
-                .dev-desc__name.dev-desc__name--welcome Богатыренко Владимир
-                .dev-desc__desc.dev-desc__desc--welcome Личный сайт веб разработчика
-              ul.social__list
-                li.social__item
-                  a.social__link(href='') vk
-                li.social__item
-                  a.social__link(href='vk') git-hub
-                li.social__item
-                  a.social__link(href='vk') in
-              ul.switch__list
-                li.switch__item
-                  a.switch__item-link(href='works.html') Мои работы
-                li.switch__item
-                  a.switch__item-link(href='about.html') Обо мне
-                li.switch__item
-                  a.switch__item-link(href='blog.html') Блог
-            .window-autoriz__btn
+    .wrapper.hero
+      include ../modules/parallax
+      .hero__header
+        button#btn-autoriz.btn-autoriz
+          .btn-autoriz__name Авторизоваться
+      .content
+        section.container
+          .card
+            .front
+              .window-welcome.window
+                .window-welcome__content
+                  .dev-desc.dev-desc--welcome
+                    .dev-desc__avatar(style='background-image:url(img/content/avatar.jpg);')
+                    .dev-desc__name.dev-desc__name--welcome
+                      span Богатыренко Владимир
+                    .dev-desc__desc.dev-desc__desc--welcome
+                      span Личный сайт веб разработчика
+                  ul.social__list.social__list--welcome
+                    li.social__item
+                      a.social__link(href='https://vk.com/bogatyrv' target="_blank" )
+                        svg.icon-social.icon-social--welcome(width='26', height='22', fill='#fff')
+                          use(xlink:href='img/symbol/sprite.svg#icons--vk')
+                    li.social__item
+                      a.social__link(href='https://github.com/uamvua' target="_blank")
+                        svg.icon-social.icon-social--welcome(width='26', height='22', fill='#fff')
+                          use(xlink:href='img/symbol/sprite.svg#icons--github')
+                    li.social__item
+                      a.social__link(href='#')
+                        svg.icon-social.icon-social--welcome(width='26', height='22', fill='#fff')
+                          use(xlink:href='img/symbol/sprite.svg#icons--in')
+                ul.switch__list
+                  li.switch__item
+                    a.switch__item-link(href='works.html') Мои работы
+                  li.switch__item
+                    a.switch__item-link(href='about.html') Обо мне
+                  li.switch__item
+                    a.switch__item-link(href='blog.html') Блог              
+            .back
+              form#form-autoriz.form-autoriz.window(action='', method='post')
+                .form-autoriz__content
+                  h3.subtitle.title--autoriz Авторизуйтесь
+                  .form-autoriz__input-block
+                    .form-autoriz__input-block-img
+                      svg.form-autoriz__input-block-icon(width='15', height='15', fill='#c4cbcd')
+                        use(xlink:href='img/symbol/sprite.svg#icons--login')
+                    input.form-autoriz__input.form-autoriz__input-block-user(type='text', name='user-name', placeholder='Логин', required='')
+                  .form-autoriz__input-block
+                    .form-autoriz__input-block-img
+                      svg.form-autoriz__input-block-icon(width='17', height='16', fill='#c4cbcd')
+                        use(xlink:href='img/symbol/sprite.svg#icons--password') 
+                    input.form-autoriz__input.form-autoriz__input-block-pass(type='password', name='pass', placeholder='Пароль', required='')
+                  .form-autoriz__captcha
+                    label.form-autoriz__captcha-human
+                      input.form-autoriz__captcha-check(type='checkbox', name='dont-disturb', value='1')
+                      .form-autoriz__captcha-check-fake
+                      .form-autoriz__captcha-human-text Я человек
+                    .form-autoriz__captcha-notrobot
+                      .form-autoriz__captcha-notrobot-text Вы точно не робот?
+                      label.form-autoriz__captcha-radio
+                        input.form-autoriz__captcha-radio-btn(type='radio', name='trigger', checked='')
+                        .form-autoriz__captcha-radio-fake
+                        .form-autoriz__captcha-radio-text Да
+                      label.form-autoriz__captcha-radio
+                        input.form-autoriz__captcha-radio-btn(type='radio', name='trigger')
+                        .form-autoriz__captcha-radio-fake
+                        .form-autoriz__captcha-radio-text Не уверен
+                ul.switch__list
+                  li.switch__item
+                    a.switch__item-link(href='') На главную
+                  li.switch__item
+                    a.switch__item-link(href='') Войти
+        footer.footer__welcome
+          span.footer__welcome-info © Владимир Богатыренко | создано с любовью в LoftSchool | 2018
+    include ../modules/script
+
