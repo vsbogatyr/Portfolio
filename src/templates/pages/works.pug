@@ -111,11 +111,11 @@ html(lang='en')
               .msg__content
                 h3.subtitle.subtitle--msg
                   span Связаться со мной           
-                input.msg__input.msg__input-name(type='text', placeholder='Имя')
-                input.msg__input.msg__input-email(type='text', placeholder='Email')
-                textarea.msg__input.msg__input-text(name='message__text', id='', placeholder='Ваше сообщение')
+                input.msg__input.msg__input-name(type='text', placeholder='Имя', required)
+                input.msg__input.msg__input-email(type='text', placeholder='Email', required)
+                textarea.msg__input.msg__input-text(name='message__text', id='', placeholder='Ваше сообщение', required)
               .msg__btns              
-                button.msg__btn.msg__btn--send Отправить              
+                button.msg__btn.msg__btn--send(type='submit') Отправить              
                 button.msg__btn.msg__btn--reset Очистить
           .up
             svg.up__icon(width='26', height='16', fill='#fff')

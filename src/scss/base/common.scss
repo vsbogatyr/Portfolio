@@ -80,6 +80,7 @@ h6 {
 
 .nav__list.nav-list--full-menu {
     flex-direction: column;
+    height: 100%;
 }
 
 .nav.nav--full-menu {
@@ -91,7 +92,7 @@ h6 {
 
 .nav__item.title--link {
     justify-content: center;
-    margin-bottom: rem(85px);
+    margin-bottom: 12%;
     @include phones {
         margin-bottom: rem(27px);
     }

@@ -122,6 +122,7 @@
 
 .about__left, .about__right {
     width: 50%;
+    overflow: hidden;
 
     @include tablets {
         width: 100%
@@ -165,6 +166,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;    
+}
+
+.skills {
+    width: 90%;
 }
 
 .map {

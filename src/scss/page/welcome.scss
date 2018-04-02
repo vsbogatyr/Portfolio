@@ -7,6 +7,18 @@
     position: relative;
 }
 
+#preloader {
+    position: absolute;
+    display: none;
+    background: url('../img/preloader_mountains/bg.jpg') no-repeat; 
+    background-size: cover;   
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 .hero__header {
     display: flex;
     justify-content: center;
@@ -222,7 +234,12 @@
         outline: none;
         border: none;
         padding-left: rem(19px);
-        
+        border: rem(1px) solid transparent;
+        &:focus {
+            outline: none;            
+            border-radius: 0 rem(5px) rem(5px) 0;
+            border-color: #00bfa5;
+        }        
     }
 
     &__captcha {

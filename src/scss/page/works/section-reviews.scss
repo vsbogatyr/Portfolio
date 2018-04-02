@@ -137,10 +137,10 @@
         margin-bottom: rem(20px);
         border-radius: rem(5px);
         padding-left: rem(20px);       
-        border: 1px solid transparent;
+        border: rem(1px) solid transparent;
         &:focus {
             outline: none;            
-            border-radius: 5px;
+            border-radius: rem(5px);
             border-color: #00bfa5;
         }
         @include tablets {
