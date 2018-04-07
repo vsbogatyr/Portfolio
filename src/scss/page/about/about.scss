@@ -172,20 +172,31 @@
     width: 90%;
 }
 
-.map {
+.map-block {
     height: 100vh;
-    background: url(../img/bg/map.png) no-repeat;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+    // background: url(../img/bg/map.png) no-repeat;
+    // background-size: cover;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    position: relative;
     @include phones {
         justify-content: initial;  
     }
 }
 
+.map {
+	width: 100%;
+	height: 100vh;
+}
+
 .contacts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     width: rem(380px);

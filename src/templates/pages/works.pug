@@ -54,19 +54,61 @@ html(lang='en')
             h2.title.works--title
               span Мои работы
           .my-work__slider
-            .my-work__slider-display
-              img(src="img/content/works/work-1.png", class="my-work__slider-display-img")
-            .my-work__slider-info
-              .my-work__slider-info-block
-                h3.subtitle.subtitle--my-work
-                  span Сайт школы онлайн образования
-                .my-work__slider-skills HTML , CSS, JAVASCRIPT
-                .my-work__slider-info-btn
-                  a.my-work__slider-info-btn-link
-                    .my-work__slider-info-btn-link-icon
-                      svg.icons-link(width='20', height='19', fill='#fff')
-                        use(xlink:href='img/symbol/sprite.svg#icons--link')
-                    .my-work__slider-info-btn-link-text Посмотреть сайт
+            ul.my-work__slider-list
+              li.my-work__slider-item.showing
+                .my-work__slider-display
+                  img(src="img/content/works/work-1.png", class="my-work__slider-display-img")
+                .my-work__slider-info
+                  .my-work__slider-info-block
+                    h3.subtitle.subtitle--my-work
+                      span Сайт школы онлайн образования
+                    .my-work__slider-skills HTML , CSS, JAVASCRIPT
+                    .my-work__slider-info-btn
+                      a.my-work__slider-info-btn-link
+                        .my-work__slider-info-btn-link-icon
+                          svg.icons-link(width='20', height='19', fill='#fff')
+                            use(xlink:href='img/symbol/sprite.svg#icons--link')
+                        .my-work__slider-info-btn-link-text Посмотреть сайт
+              li.my-work__slider-item
+                .my-work__slider-display
+                  img(src="img/content/works/work-2.png", class="my-work__slider-display-img")
+                .my-work__slider-info
+                  .my-work__slider-info-block
+                    h3.subtitle.subtitle--my-work
+                      span itloft
+                    .my-work__slider-skills HTML , CSS, JAVASCRIPT
+                    .my-work__slider-info-btn
+                      a.my-work__slider-info-btn-link
+                        .my-work__slider-info-btn-link-icon
+                          svg.icons-link(width='20', height='19', fill='#fff')
+                            use(xlink:href='img/symbol/sprite.svg#icons--link')
+                        .my-work__slider-info-btn-link-text Посмотреть сайт
+              li.my-work__slider-item
+                .my-work__slider-display
+                  .my-work__slider-display-img-wrap
+                    img(src="img/content/works/work-3.png", class="my-work__slider-display-img")
+                .my-work__slider-info
+                  .my-work__slider-info-block
+                    h3.subtitle.subtitle--my-work
+                      span LoftBlog
+                    .my-work__slider-skills HTML , CSS, JAVASCRIPT
+                    .my-work__slider-info-btn
+                      a.my-work__slider-info-btn-link
+                        .my-work__slider-info-btn-link-icon
+                          svg.icons-link(width='20', height='19', fill='#fff')
+                            use(xlink:href='img/symbol/sprite.svg#icons--link')
+                        .my-work__slider-info-btn-link-text Посмотреть сайт                             
+            .buttons
+              a.controls#previous
+                svg.previous-slider(width='26', height='16', fill='#fff')
+                  use(xlink:href='img/symbol/sprite.svg#icons--arrow_down')
+              a.controls#next
+                svg.next-slider(width='26', height='16', fill='#fff')
+                  use(xlink:href='img/symbol/sprite.svg#icons--arrow_down')
+            ul.sidebar__list
+              li.sidebar__item.active
+              li.sidebar__item
+              li.sidebar__item
             //- .my-work__slider-btns
             //-   .my-work__slider-btns-down
             //-     img(src="img/content/works/work-2.png", class="my-work__slider-btns-down-img")
