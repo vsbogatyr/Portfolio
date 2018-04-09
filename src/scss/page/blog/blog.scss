@@ -54,7 +54,7 @@
         bottom: 0;
         font-size: 16px;
         color: rgba($color: #ffffff, $alpha: 0.7);
-        z-index: 15;        
+        z-index: 31;        
     }
     &.active {
         @include phones {

@@ -173,18 +173,18 @@
             </li>
           </ul>
         </div>
-        <form class="msg" action="">
+        <form class="msg form" action="server.php" method="post" id="form">
           <div class="msg__blur"></div>
           <div class="msg__wrapper">
             <div class="msg__content">
               <h3 class="subtitle subtitle--msg"><span>Связаться со мной           </span></h3>
               <input class="msg__input msg__input-name" type="text" placeholder="Имя" required>
-              <input class="msg__input msg__input-email" type="text" placeholder="Email" required>
+              <input class="msg__input msg__input-email" type="email" name="email" placeholder="Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$">
               <textarea class="msg__input msg__input-text" name="message__text" id="" placeholder="Ваше сообщение" required></textarea>
             </div>
             <div class="msg__btns">             
               <button class="msg__btn msg__btn--send" type="submit">Отправить              </button>
-              <button class="msg__btn msg__btn--reset">Очистить</button>
+              <button class="msg__btn msg__btn--reset" type="reset">Очистить</button>
             </div>
           </div>
         </form>

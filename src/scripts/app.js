@@ -46,7 +46,26 @@ var
         }        
       }, 1000);
     }
-  }  
+  }
+
+//----------------------------------------------------------------
+//скролл секции
+if (document.querySelector('.down')) {
+const section = document.querySelector('.section');
+const down = document.querySelector('.down');
+
+down.addEventListener('click', e => {
+    console.log(window.innerHeight);
+    $('body, html').animate({scrollTop: window.innerHeight}, 700);
+})
+}
+
+if (document.querySelector('.up')) {
+    const up = document.querySelector('.up');
+    up.addEventListener('click', e => {        
+        $('body, html').animate({scrollTop: 0}, 700);
+    })
+}
 
 //-----------------------------------------------------------------
 //флип
@@ -61,6 +80,7 @@ if (autorizBtn) {
     });
 }
 
+//меню
 if (heroMenu) {
     heroMenu.addEventListener('click', function() {
         hamburger.classList.toggle("active");
@@ -96,6 +116,27 @@ var moveLayers = function (e) {
 window.addEventListener('mousemove', moveLayers);
 
 //---------------------------------------------------------------------------
+
+//skills
+
+const circles =  [...document.querySelectorAll('.circles')];
+$(document).ready(function(){
+    const sectionAboutTop = $('.about').offset().top;    
+    $(window).scroll(function(){
+        if( $(window).scrollTop() > sectionAboutTop ) {
+            circles.forEach((item, i) => {
+                item.classList.add('active')                
+            })
+        } else {
+            circles.forEach((item, i) => {
+                item.classList.remove('active')                
+            })           
+        }
+    });
+});
+
+
+//----------------------------------------------------------------------------
 
 //blur
 if (document.querySelector('.msg')) {
@@ -165,15 +206,19 @@ window.onresize = function () {
 
 if (document.querySelector('.nav-blog')) {
 console.log($(window).scrollTop());
+var mql = window.matchMedia('all and (max-width: 480px)');
+
 
 $(document).ready(function(){
-    const HeaderTop = $('.nav-blog__list').offset().top;    
+    const HeaderTop = $('.nav-blog__list').offset().top;       
     $(window).scroll(function(){
+    if (!mql.matches) {
         if( $(window).scrollTop() > HeaderTop ) {
-            $('.nav-blog__list').css({position: 'fixed', top: '0px', width: '24%'});
+            $('.nav-blog__list').css({position: 'fixed', top: '20px', width: '24%'});
         } else {
             $('.nav-blog__list').css({position: 'static', width: 'auto'});
         }
+    }
     });
 });
 
@@ -204,7 +249,7 @@ window.addEventListener('scroll', function(){
         }  
   })
 })
-}
+
 // navBlogLink.forEach(function(el, i){
 //     navBlogLink[i].addEventListener('click', event=>{
 //         event.preventDefault();
@@ -218,11 +263,23 @@ $(function(){
 	$('a[data-target^="anchor"]').on('click', function(){
 		var target = $(this).attr('href'),
 			bl_top = $(target).offset().top-70;
-		$('body, html').animate({scrollTop: bl_top}, 700);
+        $('body, html').animate({scrollTop: bl_top}, 700);
+        if (mql.matches) {
+        $('.nav-blog__list').css({display: 'none'});
+        $(navBlog).css({width : '0%', position: 'fixed'});
+        }
 		return false;
 	});
 });
 
+const openMenu = document.querySelector('.open-menu');
+var navBlog = document.querySelector('.nav-blog');
+var navBlogItem = document.querySelectorAll('.nav-blog__item')
+openMenu.addEventListener('click', function(){
+    $(navBlog).css({width : '88%', position: 'fixed'});
+    $('.nav-blog__list').css({display: 'block', marginTop: '20px'});
+});
+}
 //-----------------------------------------------------------------------
 
 //слайдер
@@ -254,11 +311,13 @@ function setupListners(){
     }
 }
 
-// [...document.querySelectorAll('.points')].forEach((item, i) => {
-//     i.addEventListener('click', (e) => goToSlide(i))
-// })
-// !document.querySelector('input').value.contains('@')
-// (!var1.contains('@') && !var... && var.length > 4)
+[...document.querySelectorAll('.sidebar__item')].forEach((item, i) => {
+    item.addEventListener('click', (e) => goToSlide(i))
+    console.log([...document.querySelectorAll('.sidebar__item')]);
+})
+
+// !document.querySelector('.msg__input-email').value.contains('@')
+// (!var.contains('.') && !var... && var.length > 4)
 
 // показывает кнопки для навигации
 function showButtons(){
@@ -275,6 +334,7 @@ function showButtons(){
     }
 
 //------------------------------------------------------------------------------
+
 //карта
 
 if (document.querySelector('.map'))

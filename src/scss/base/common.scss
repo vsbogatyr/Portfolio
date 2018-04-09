@@ -126,6 +126,7 @@ h6 {
     color: #455a64;
     @include tablets {
         font-size: rem(30px);
+        justify-content: center;
     }
     @include phones {
         font-size: rem(21px);
@@ -294,7 +295,7 @@ h6 {
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: rem(100px);
     left: 0;
     will-change: transform;
   }

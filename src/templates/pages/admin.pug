@@ -1,0 +1,90 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,500i,700,700i&subset=cyrillic', rel='stylesheet')
+    link(rel='stylesheet', href='styles/normalize.css')
+    link(rel='stylesheet', href='styles/main.min.css')
+    title Панель администрирования
+
+    body
+        .wrapper
+            section.section.admin
+                header.admin__header
+                    .admin__header-title 
+                        span Панель администрирования
+                    .admin__header-link
+                        a.admin__header-link-el Вернуться на сайт
+                .admin__tab
+                    ul.admin__tab-list
+                        li.admin__tab-item.active
+                            a.admin__tab-item-link TAB 1
+                        li.admin__tab-item
+                            a.admin__tab-item-link TAB 2
+                        li.admin__tab-item
+                            a.admin__tab-item-link TAB 3
+                main.admin__main
+                    .admin__section.admin__section-about
+                        .admin__section-title
+                            span Страница "Обо мне"
+                        ul.admin__list-skills
+                            li.admin__item-skills
+                                .admin__title-skills 
+                                    span Frontend
+                                ul.admin__item-skills-elements
+                                    li.admin__item-skills-el
+                                        .admin__item-skills-el-name 
+                                            span HTML
+                                        .admin__item-skills-el-value-block
+                                            input.admin__item-skills-el-value
+                                            span.admin__item-skills-el-index %
+                                    li.admin__item-skills-el
+                                        span.admin__item-skills-el-name CSS
+                                        .admin__item-skills-el-value-block
+                                            input.admin__item-skills-el-value
+                                            span.admin__item-skills-el-index %
+                                    li.admin__item-skills-el
+                                        span.admin__item-skills-el-name JavaScript
+                                        .admin__item-skills-el-value-block
+                                            input.admin__item-skills-el-value
+                                            span.admin__item-skills-el-index %
+                            li.admin__item-skills
+                                .admin__title-skills 
+                                    span Backend
+                                ul.admin__item-skills-elements
+                                    li.admin__item-skills-el
+                                        span.admin__item-skills-el-name PHP
+                                        .admin__item-skills-el-value-block
+                                            input.admin__item-skills-el-value
+                                            span.admin__item-skills-el-index %
+                                    li.admin__item-skills-el
+                                        span.admin__item-skills-el-name Node.js
+                                        .admin__item-skills-el-value-block
+                                            input.admin__item-skills-el-value
+                                            span.admin__item-skills-el-index %
+                                    li.admin__item-skills-el
+                                        span.admin__item-skills-el-name Mongo.db
+                                        .admin__item-skills-el-value-block
+                                            input.admin__item-skills-el-value
+                                            span.admin__item-skills-el-index %
+                            li.admin__item-skills
+                                .admin__title-skills 
+                                    span Workflow
+                                ul.admin__item-skills-elements
+                                    li.admin__item-skills-el
+                                        span.admin__item-skills-el-name Git
+                                        .admin__item-skills-el-value-block
+                                            input.admin__item-skills-el-value
+                                            span.admin__item-skills-el-index %
+                                    li.admin__item-skills-el
+                                        span.admin__item-skills-el-name Gulp
+                                        .admin__item-skills-el-value-block
+                                            input.admin__item-skills-el-value
+                                            span.admin__item-skills-el-index % 
+                                    li.admin__item-skills-el
+                                        span.admin__item-skills-el-name Bower
+                                        .admin__item-skills-el-value-block
+                                            input.admin__item-skills-el-value
+                                            span.admin__item-skills-el-index %              

@@ -138,15 +138,20 @@
         border-radius: rem(5px);
         padding-left: rem(20px);       
         border: rem(1px) solid transparent;
-        &:focus {
+        &:focus:valid {
             outline: none;            
             border-radius: rem(5px);
             border-color: #00bfa5;
         }
+        &:focus:invalid {
+            outline: none;            
+            border-radius: rem(5px);
+            border-color: red;
+        }
+
         @include tablets {
             width: 85%;            
-        }
-        
+        }        
     }
 
     &__input-name, &__input-email {

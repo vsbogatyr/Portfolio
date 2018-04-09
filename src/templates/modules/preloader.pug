@@ -2,9 +2,10 @@
 #page-preloader.preloader(style='background: url(img/preloader_mountains/bg.jpg) center center no-repeat;  background-size: cover;')
     //.loader
     .loader2
-        ul.wrap-circle
-            li.item-circle
-                svg.circles(viewbox='0 0 110 110')
-                circle.circle__first(r='45', cx='50%', cy='50%', fill='none')
-                circle.circle__second.circle-100(r='45', cx='50%', cy='50%', transform='rotate(-90 55 55)')
-        span#load_perc 0%
+        ul.loader__list
+            li.loader__item
+                svg.loader__circle(viewbox='0 0 180 180')
+                    circle.loader__circle-third.circle-100(r='85', cx='50%', cy='50%', transform='rotate(-90 90 90)')
+                    circle.loader__circle-first.circle-100(r='70', cx='50%', cy='50%', transform='rotate(-90 90 90)')
+                    circle.loader__circle-second.circle-100(r='55', cx='50%', cy='50%', transform='rotate(-90 90 90)')
+                span.loader__item-title#load_perc 0%        

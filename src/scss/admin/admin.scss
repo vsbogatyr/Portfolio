@@ -1,0 +1,119 @@
+.admin__header {
+    width: 100%;
+    height: 9%;
+    background: #00bfa5;
+    display: flex;
+    padding: 0 rem(30px);
+    align-items: center;
+
+    &-title {
+        width: 50%;
+        font-weight: 500;
+        font-size: rem(28px);
+        color: #ffffff;
+    }
+    &-link {
+        width: 50%;
+        text-align: right;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.7);
+        cursor: pointer;
+        transition: 0.3s;
+        &:hover {
+        color: rgba(255, 255, 255, 1);
+        }
+        &-el {
+            text-decoration: underline;
+        }
+    }
+}
+.admin__tab {
+    width: 100%;
+    height: 8%;
+    background: #f0efe9;    
+    &-list{
+        display: flex;
+        height: 100%;        
+    }   
+}
+
+.admin__tab-item {
+    height: 100%;
+    width: 15%;
+    display: flex;   
+    border-right: 2px solid #ffffff;
+
+    &-link {
+        display: inline-flex;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        color: rgba(69, 90, 100, 0.8);
+        font-weight: 500;      
+    }
+    
+    &.active {
+        background: #ffffff;
+        & .admin__tab-item-link {
+        color: #00bfa5;
+        }           
+    }
+
+    &:hover {
+        color:#00bfa5;
+        background: #ffffff;        
+    }    
+}  
+
+.admin__main {
+    background: url(../img/bg/admin.jpg) center center no-repeat;
+    background-size: cover;
+    height: 83%;
+    padding: 50px 30px 30px 40px;
+    color: #455a64;
+    font-weight: 500;   
+   
+}
+
+.admin__section-title {
+    margin-bottom: rem(45px);
+    font-weight: 500;
+    font-size: rem(21px);
+}
+
+.admin__item-skills-elements {
+    padding-left: rem(20px);
+    width: rem(200px);
+    font-weight: 400;
+}
+
+.admin__title-skills {
+    margin-bottom: rem(20px);
+}
+
+.admin__item-skills-el {
+    margin-bottom: rem(10px);
+    display: flex;
+    width: 100%;
+    align-items: center;   
+}
+
+.admin__item-skills-el-name {
+    width: 50%;
+}
+
+.admin__item-skills-el-value-block {
+    width: 50%;
+
+}
+
+.admin__item-skills-el-value {
+    width: rem(45px);
+    height: rem(35px);
+    border-radius: rem(5px);
+    border: none;
+    text-align: center;
+    margin-right: rem(10px);
+}

@@ -57,7 +57,7 @@ html(lang='en')
             ul.my-work__slider-list
               li.my-work__slider-item.showing
                 .my-work__slider-display
-                  img(src="img/content/works/work-1.png", class="my-work__slider-display-img")
+                  img.my-work__slider-display-img(src="img/content/works/work-1.png")
                 .my-work__slider-info
                   .my-work__slider-info-block
                     h3.subtitle.subtitle--my-work
@@ -71,7 +71,7 @@ html(lang='en')
                         .my-work__slider-info-btn-link-text Посмотреть сайт
               li.my-work__slider-item
                 .my-work__slider-display
-                  img(src="img/content/works/work-2.png", class="my-work__slider-display-img")
+                  img.my-work__slider-display-img(src="img/content/works/work-2.png")
                 .my-work__slider-info
                   .my-work__slider-info-block
                     h3.subtitle.subtitle--my-work
@@ -86,7 +86,7 @@ html(lang='en')
               li.my-work__slider-item
                 .my-work__slider-display
                   .my-work__slider-display-img-wrap
-                    img(src="img/content/works/work-3.png", class="my-work__slider-display-img")
+                    img.my-work__slider-display-img(src="img/content/works/work-3.png")
                 .my-work__slider-info
                   .my-work__slider-info-block
                     h3.subtitle.subtitle--my-work
@@ -147,18 +147,18 @@ html(lang='en')
                       span Сабанцев Владимир
                     .reviews__autor-position 
                       span преподаватель
-          form.msg(action='')
+          form.msg(action=action='server.php' method='post' class='form' id='form')
             .msg__blur
             .msg__wrapper
               .msg__content
                 h3.subtitle.subtitle--msg
                   span Связаться со мной           
                 input.msg__input.msg__input-name(type='text', placeholder='Имя', required)
-                input.msg__input.msg__input-email(type='text', placeholder='Email', required)
+                input.msg__input.msg__input-email(type='email', name='email', placeholder='Email', required, pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$')
                 textarea.msg__input.msg__input-text(name='message__text', id='', placeholder='Ваше сообщение', required)
               .msg__btns              
                 button.msg__btn.msg__btn--send(type='submit') Отправить              
-                button.msg__btn.msg__btn--reset Очистить
+                button.msg__btn.msg__btn--reset(type='reset') Очистить
           .up
             svg.up__icon(width='26', height='16', fill='#fff')
               use(xlink:href='img/symbol/sprite.svg#icons--arrow_down')

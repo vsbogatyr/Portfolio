@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     @include tablets {
-        height: auto;
+        height: 100vh;
     }
 
     &__title {
@@ -18,7 +18,11 @@
         }
     }
 }
-
+.subtitle--my-work {
+    @include tablets {
+        margin: rem(25px) 0 rem(25px) 0;
+    }
+}
 .my-work__slider {
     position: relative;
     height: 81%;
@@ -44,8 +48,7 @@
         left: 0;
         right: 0;
         @include tablets {
-            flex-wrap: nowrap;
-        }
+                    }
     }
 
     &-skills {
@@ -60,7 +63,8 @@
             margin-top: rem(7px);
             padding: rem(16px) rem(0px);
             font-size: rem(16px);
-            width: 70%
+            width: 70%;
+            text-align: center;
         }
         @include phones {
             width: 100%;
@@ -94,8 +98,8 @@
     height: 100%;
     @include tablets {
         width: 100%;
-        order: 2;
-        height: auto;
+        order: 1;
+        height: 35%;
         padding: rem(40px) 0 rem(60px) 0;
     }
     @include phones {
@@ -109,8 +113,9 @@
         justify-content: center;
         //align-items: center;
         //text-align: center;
-        @include phones {
+        @include tablets {
             width: 100%;
+            align-items: center;
         }
     }
 
@@ -149,19 +154,28 @@
     align-items: flex-end;
     @include tablets {
         width: 100%;
-        order: 1;
-        height: rem(527px);
+        order: 2;
+        //height: rem(527px);
+        height: 65%;
+        justify-content: center;
+        align-items: flex-end;
     }
     @include phones {
-        height: rem(257px);
+        //height: rem(257px);
     }
 
     &-img {
         @include tablets {
-            height: 73%;
+            height: 100%;
         }
         @include phones {
-            height: 63%;
+            height: 100%;
+        }
+    }
+
+    &-img-wrap {
+        @include tablets {
+            height: 90%;
         }
     }
 }
@@ -244,13 +258,19 @@
     position: absolute;    
     top: 50%;
     transform: rotate(90deg) translateY(-50%);
+    @include phones {
+        left: 1%;    
+    }
 }
 
 #next {
     right: rem(30px);
     position: absolute;    
     top: 50%;
-    transform: rotate(-90deg) translateY(-50%);    
+    transform: rotate(-90deg) translateY(-50%);
+    @include phones {
+        right: 1%;    
+    }
 }
 
 .previous-slider, .next-slider {
@@ -270,6 +290,9 @@
     transform: translateX(-50%);
     bottom: rem(40px);
     z-index: 15;
+    @include phones {
+        bottom: 2%;    
+    }
 }
 
 .sidebar__item {

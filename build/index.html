@@ -14,13 +14,15 @@
       <div class="preloader" id="page-preloader" style="background: url(img/preloader_mountains/bg.jpg) center center no-repeat;  background-size: cover;">
         <!--.loader-->
         <div class="loader2">
-          <ul class="wrap-circle">
-            <li class="item-circle">
-              <svg class="circles" viewbox="0 0 110 110"></svg>
-              <circle class="circle__first" r="45" cx="50%" cy="50%" fill="none"></circle>
-              <circle class="circle__second circle-100" r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)"></circle>
+          <ul class="loader__list">
+            <li class="loader__item">
+              <svg class="loader__circle" viewbox="0 0 180 180">
+                <circle class="loader__circle-third circle-100" r="85" cx="50%" cy="50%" transform="rotate(-90 90 90)"></circle>
+                <circle class="loader__circle-first circle-100" r="70" cx="50%" cy="50%" transform="rotate(-90 90 90)"></circle>
+                <circle class="loader__circle-second circle-100" r="55" cx="50%" cy="50%" transform="rotate(-90 90 90)"></circle>
+              </svg><span class="loader__item-title" id="load_perc">0%        </span>
             </li>
-          </ul><span id="load_perc">0%</span>
+          </ul>
         </div>
       </div>
       <div class="parallax" id="parallax">
