@@ -16,4 +16,4 @@
 #### Добавлены плагины gulp-autoprefixer gulp-svg-sprites
 #### Добавлены функции переноса шрифтов, функция переноса общих стилей.
 
-https://uamvua.github.io/Portfolio/
+https://vsbogatyr.github.io/Portfolio/
